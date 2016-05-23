@@ -1,16 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn">
   <bpmn:process id="camunda-example" isExecutable="false">
-    <bpmn:startEvent id="StartEvent_0l0maqo" />
+    <bpmn:startEvent id="StartEvent_0l0maqo">
+      <bpmn:outgoing>SequenceFlow_06lk2ok</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:businessRuleTask id="BusinessRuleTask_camunda-example" name="camunda example rule" camunda:resultVariable="resultRule" camunda:decisionRef="camunda-example-rules">
+      <bpmn:incoming>SequenceFlow_06lk2ok</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1egyybi</bpmn:outgoing>
+    </bpmn:businessRuleTask>
+    <bpmn:task id="Task_076xg2n">
+      <bpmn:incoming>SequenceFlow_1egyybi</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1biuutd</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="SequenceFlow_1egyybi" sourceRef="BusinessRuleTask_camunda-example" targetRef="Task_076xg2n" />
+    <bpmn:endEvent id="EndEvent_18bmhbd">
+      <bpmn:incoming>SequenceFlow_1biuutd</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="SequenceFlow_1biuutd" sourceRef="Task_076xg2n" targetRef="EndEvent_18bmhbd" />
+    <bpmn:sequenceFlow id="SequenceFlow_06lk2ok" sourceRef="StartEvent_0l0maqo" targetRef="BusinessRuleTask_camunda-example" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="camunda-example">
       <bpmndi:BPMNShape id="StartEvent_0l0maqo_di" bpmnElement="StartEvent_0l0maqo">
-        <dc:Bounds x="154" y="185" width="36" height="36" />
+        <dc:Bounds x="230" y="326" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="127" y="221" width="90" height="20" />
+          <dc:Bounds x="203" y="362" width="90" height="20" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BusinessRuleTask_0ih6ig9_di" bpmnElement="BusinessRuleTask_camunda-example">
+        <dc:Bounds x="326" y="304" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Task_076xg2n_di" bpmnElement="Task_076xg2n">
+        <dc:Bounds x="517" y="304" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1egyybi_di" bpmnElement="SequenceFlow_1egyybi">
+        <di:waypoint xsi:type="dc:Point" x="426" y="344" />
+        <di:waypoint xsi:type="dc:Point" x="517" y="344" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="653" y="334" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="EndEvent_18bmhbd_di" bpmnElement="EndEvent_18bmhbd">
+        <dc:Bounds x="701" y="326" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="674" y="362" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1biuutd_di" bpmnElement="SequenceFlow_1biuutd">
+        <di:waypoint xsi:type="dc:Point" x="617" y="344" />
+        <di:waypoint xsi:type="dc:Point" x="701" y="344" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="734.5" y="334" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_06lk2ok_di" bpmnElement="SequenceFlow_06lk2ok">
+        <di:waypoint xsi:type="dc:Point" x="266" y="344" />
+        <di:waypoint xsi:type="dc:Point" x="326" y="344" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="251" y="334" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>
