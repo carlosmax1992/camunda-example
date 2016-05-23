@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn11.xsd" id="definitions" name="definitions" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="camunda-example-rules" name="camunda-example-rules">
+    <decisionTable id="decisionTable" hitPolicy="COLLECT">
+      <input id="input1" label="empid">
+        <inputExpression id="inputExpression1" typeRef="string">        <text>empid</text>
+</inputExpression>
+      </input>
+      <input id="InputClause_1s0rp6j" label="jobCodes">
+        <inputExpression id="LiteralExpression_08spsdu" typeRef="string">        <text>jobCodes</text>
+</inputExpression>
+      </input>
+      <output id="OutputClause_0slekk3" label="Flow Type" name="flow" typeRef="string" />
+      <output id="output1" label="Employee Name" name="employeeName" typeRef="string" />
+      <output id="OutputClause_0k5ux50" label="Job Code Description" name="jobCodeDescription" typeRef="string" />
+      <rule id="row-296781011-1">
+        <description>Temporary Access</description>
+        <inputEntry id="UnaryTests_0jxj332">        <text><![CDATA["99528"]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0uybpi0">        <text></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_0950j0e">        <text><![CDATA["GXI"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0fxr0c1">        <text><![CDATA["Margaret Waynick"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1occpur">        <text></text>
+</outputEntry>
+      </rule>
+      <rule id="row-296781011-2">
+        <description>Temporary Access</description>
+        <inputEntry id="UnaryTests_1w1whfb">        <text><![CDATA["2282F"]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0zmlq0x">        <text></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1tk7ghv">        <text><![CDATA["GXI"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_09jidz6">        <text><![CDATA["Naheed Behnawa"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0vfgrvj">        <text></text>
+</outputEntry>
+      </rule>
+      <rule id="row-296781011-3">
+        <description>Temporary Access</description>
+        <inputEntry id="UnaryTests_1pz4u4p">        <text><![CDATA["7831P"]]></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_1ddqzs1">        <text></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_0gr7uvm">        <text><![CDATA["GXI"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0c34t95">        <text><![CDATA["Sheeba Chandrasekhar"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0070lt3">        <text></text>
+</outputEntry>
+      </rule>
+      <rule id="row-296781011-4">
+        <inputEntry id="UnaryTests_0n80ady">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0tlbs51">        <text><![CDATA["4306"]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1ynorzw">        <text><![CDATA["GXI"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1ddlh4z">        <text></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_083b7tf">        <text><![CDATA["GX instructor"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="row-296781011-5">
+        <inputEntry id="UnaryTests_0yefnjr">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0xv7jri">        <text><![CDATA["5551"]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1iz59yx">        <text><![CDATA["GXI"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1hyqriq">        <text></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1bxi0pf">        <text><![CDATA["Sr. Director, GX Operations"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="row-296781011-6">
+        <inputEntry id="UnaryTests_13uftj9">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_1vtjgze">        <text><![CDATA["7046"]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_1j0g5ep">        <text><![CDATA["GXI"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1sovlgu">        <text></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1xj084b">        <text><![CDATA["Regional GX Director"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="row-296781011-7">
+        <inputEntry id="UnaryTests_1i1rbuw">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_10ijsdz">        <text><![CDATA["8851"]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_04utjmd">        <text><![CDATA["GXI"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0uyvt9u">        <text></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0vd2jxp">        <text><![CDATA["Group Fitness Ops Manager"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="row-296781011-8">
+        <inputEntry id="UnaryTests_1w349eu">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_11v1v9c">        <text><![CDATA["5443"]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_0afiucd">        <text><![CDATA["GXI"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0z5a33t">        <text></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_1dpehon">        <text><![CDATA["VP, GX Ops"]]></text>
+</outputEntry>
+      </rule>
+      <rule id="row-296781011-9">
+        <inputEntry id="UnaryTests_1sbrdle">        <text></text>
+</inputEntry>
+        <inputEntry id="UnaryTests_0oj78xs">        <text><![CDATA["5389"]]></text>
+</inputEntry>
+        <outputEntry id="LiteralExpression_0bvs92s">        <text><![CDATA["GXI"]]></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_0ekpk2t">        <text></text>
+</outputEntry>
+        <outputEntry id="LiteralExpression_031dazt">        <text><![CDATA["Area Group X Manager"]]></text>
+</outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
